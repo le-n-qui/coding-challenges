@@ -17,9 +17,7 @@ def pattern_printing(n):
  	# and hold them in the list
  	num_list = list(range(1, biggest_num + 1)) 
  	
- 	# Printing left half of the pattern
- 	# stopping at the multiply sign in the middle
- 	# Left half contains n left groups of decreasing size
+ 	# Left half of pattern contains n left groups of decreasing size
  	# Similar to right haft
  	# However, pay attention to dashes for left half
 
@@ -59,7 +57,8 @@ def pattern_printing(n):
  		for left_index in range(start_of_left, end_of_left): 
  			print(num_list[left_index], end="")
  			print("*", end="")
- 		# Write code beloe to print right half of pattern
+
+ 		# Write code below to print right half of pattern
  		for right_index in range(start_of_right, end_of_right):
  			print(num_list[right_index], end="")
  			if right_index + 1 != end_of_right:
