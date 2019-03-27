@@ -28,13 +28,31 @@ def pattern_printing(n):
  	# end of left group
  	end_of_left = 0
 
+ 	# begin of right group
+ 	start_of_right = biggest_num
+ 	# end of right group
+ 	end_of_right = 0 
+
  	# size of groups decrease with each iteration
  	for size in range(n, 0, -1):
  		# assign start point and endpoint for each group
  		# in first iteration: start_of_left is 0 and end_of_left is n
  		# later iterations, this updates end_of_left
  		end_of_left = end_of_left + size
+
+ 		# Update start_of_right
+ 		start_of_right = start_of_right - size
  		
+ 		
+ 		# Write code below to print left half of pattern
+ 		
+ 		# Update end_of_right
+ 		end_of_right = start_of_right + size
+
+ 		
+ 		# Write code below to print right half of pattern
+
  		# Update start_of_left
  		start_of_left = start_of_left + size
+
 
