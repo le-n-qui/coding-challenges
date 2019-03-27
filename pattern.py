@@ -43,16 +43,14 @@ def pattern_printing(n):
  		# Update start_of_right
  		start_of_right = start_of_right - size
  		
- 		
- 		# Write code below to print left half of pattern
- 		
  		# Update end_of_right
  		end_of_right = start_of_right + size
 
- 		
- 		# Write code below to print right half of pattern
+ 		# Write code below to print pattern
+ 		# use zip() to do parallel traversals
 
  		# Update start_of_left
  		start_of_left = start_of_left + size
 
-
+# Test function
+pattern_printing(3)
