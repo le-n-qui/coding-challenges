@@ -15,8 +15,8 @@ def pattern_printing(n):
 
  	# generate all numbers in the pattern
  	# and hold them in the list
- 	num_list = list(range(1, biggest_num)) 
-
+ 	num_list = list(range(1, biggest_num + 1)) 
+ 	
  	# Printing left half of the pattern
  	# stopping at the multiply sign in the middle
  	# Left half contains n left groups of decreasing size
@@ -46,8 +46,19 @@ def pattern_printing(n):
  		# Update end_of_right
  		end_of_right = start_of_right + size
 
- 		# Write code below to print pattern
- 		# use zip() to do parallel traversals
+ 		# Write code to print dashes
+
+ 		# Write code below to print left half of pattern
+ 		for left_index in range(start_of_left, end_of_left): 
+ 			print(num_list[left_index], end="")
+ 			print("*", end="")
+ 		# Write code beloe to print right half of pattern
+ 		for right_index in range(start_of_right, end_of_right):
+ 			print(num_list[right_index], end="")
+ 			if right_index + 1 != end_of_right:
+ 				print("*", end="")
+ 			else:
+ 				print()
 
  		# Update start_of_left
  		start_of_left = start_of_left + size
