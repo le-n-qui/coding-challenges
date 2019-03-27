@@ -3,8 +3,8 @@
 # Output: pattern
 # If n = 3, we have 
 #1*2*3*10*11*12
-#--4*5*8*9
-#----6*7
+#-4*5*8*9
+#--6*7
 
 # Qui Le
 # 03/26/2019
@@ -47,6 +47,13 @@ def pattern_printing(n):
  		end_of_right = start_of_right + size
 
  		# Write code to print dashes
+ 		# The number of dashes of each line 
+ 		# is determined by line position
+ 		# if n == 3, there are 3 lines with
+ 		# positions as follow: 0, 1, and 2
+ 		# So, line 1, 2 and 3 have 0, 1, 2 dashes, respectively
+ 		# in our code: n-size helps us get the line position
+ 		print("-" * (n-size), end="")
 
  		# Write code below to print left half of pattern
  		for left_index in range(start_of_left, end_of_left): 
@@ -64,4 +71,4 @@ def pattern_printing(n):
  		start_of_left = start_of_left + size
 
 # Test function
-pattern_printing(3)
+pattern_printing(4)
