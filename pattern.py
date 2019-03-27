@@ -17,4 +17,24 @@ def pattern_printing(n):
  	# and hold them in the list
  	num_list = list(range(1, biggest_num)) 
 
- 	
+ 	# Printing left half of the pattern
+ 	# stopping at the multiply sign in the middle
+ 	# Left half contains n left groups of decreasing size
+ 	# Similar to right haft
+ 	# However, pay attention to dashes for left half
+
+ 	# begin of left group
+ 	start_of_left = 0
+ 	# end of left group
+ 	end_of_left = 0
+
+ 	# size of groups decrease with each iteration
+ 	for size in range(n, 0, -1):
+ 		# assign start point and endpoint for each group
+ 		# in first iteration: start_of_left is 0 and end_of_left is n
+ 		# later iterations, this updates end_of_left
+ 		end_of_left = end_of_left + size
+ 		
+ 		# Update start_of_left
+ 		start_of_left = start_of_left + size
+
