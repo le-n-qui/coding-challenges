@@ -13,3 +13,14 @@
 # List of Files
 
 
+# Import os.walk()
+from os import walk
+
+# Example of a directory path for testing
+dir_path = '/Users/lnq/Downloads/Ex_Files_SQL_EssT/Exercise Files' 
+
+
+
+
+
+
