@@ -43,6 +43,23 @@ def organize_directory(abs_path):
 
 	return directory_dict
 
+# We will organize contents of the given directory
+# in a different format with below function
+# Directory and subdirectory will be represented by {} (dictionary).
+# Essentially, we will have nested dictionary
+
+# Below is an example of what it looks like:
+# {'pathname': '/home/user/folder', 
+#  'subdirectory': {'minifolder': {'pathname': '/home/user/folder/minifolder', 
+#                                  'subdirectory': {} ,
+#                                  'files': [] } }, 
+#  'files': [] }
+
+def construct_directory(abs_path):
+	pass
+
+def __make_directory(path, directory):	
+	pass
 
 
 
