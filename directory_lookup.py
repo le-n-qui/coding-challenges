@@ -56,15 +56,54 @@ def organize_directory(abs_path):
 #  'files': [] }
 
 def construct_directory(abs_path):
-	pass
+	directory = {}
+	for current_dir_name, subdir_list, files_list in walk(abs_path):
+		directory = __make_directory(directory, current_dir_name, subdir_list, files_list)
+	return directory
 
-def __make_directory(path, directory):	
-	pass
+def __make_directory(directory, dir_name, subdir_list, files_list):	
+	
+	if directory == {}: # handle the parent (first) directory (level 1)	
+		directory['pathname'] = dir_name
+		directory['subdirectories'] = {}
+		for subdir_name in subdir_list:
+			directory['subdirectories'][subdir_name] = {}
+		directory['files'] = files_list
+		return directory
+	
+	else: # if there are more than 1 level (children and grandchildren directories)
 
+		# Split dir_name into a list of distinct names
+		names_in_dir_name = dir_name.split('/') # child dir_name
+		# Also, split parent directory's pathname into a list of distinct name
+		names_in_parent_dir = directory['pathname'].split('/')
+		
+		# Currently, we are at level 1
+		current_directory = directory
+		# Below we move out of level 1
+		# With each iteration, we move into the correct subdirectory of next level
+		# NOTE: we slice names_in_dir_name list to get names of subdirectories only
+		for name in names_in_dir_name[len(names_in_parent_dir):]: 
+			# below we are changing our current directory 
+			current_directory = current_directory['subdirectories'][name]
+
+		# At the end of loop, we are inside the innermost subdirectory, which is empty
+		# we make a recursive call to __make_directory  
+		# to update current directory with new given info
+		current_directory = __make_directory(current_directory, dir_name, subdir_list, files_list)
+
+	return directory 
+	
 
 
 # TEST FUNCTIONS IN THIS SCRIPT
 if __name__ == '__main__':
+	print("***FIRST TEST***")
 	whole_directory = organize_directory(dir_path)
 	print(whole_directory)
+
+	# test construct_directory
+	print("\n***SECOND TEST***")
+	dir_dict = construct_directory(dir_path)
+	print(dir_dict)
 
