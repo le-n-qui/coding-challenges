@@ -12,10 +12,12 @@ def reverse_digits_in_pairs(number):
 # Unit Testing
 class TestReverseFn(unittest.TestCase):
 	def test_number_of_even_length(self):
-		pass
+		n = 123456
+		self.assertEqual(reverse_digits_in_pairs(n), 214365)
 
 	def test_number_of_odd_length(self):
-		pass
+		n = 67895
+		self.assertEqual(reverse_digits_in_pairs(n), 76985)
 
 
 if __name__ == '__main__':
