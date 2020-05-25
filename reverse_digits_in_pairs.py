@@ -43,6 +43,19 @@ class TestReverseFn(unittest.TestCase):
 		n = 67895
 		self.assertEqual(reverse_digits_in_pairs(n), 76985)
 
+	def test_number_with_one_zero_digit(self):
+		n1 = 120445
+		n2 = 124045
+		self.assertEqual(reverse_digits_in_pairs(n1), 214054)
+		self.assertEqual(reverse_digits_in_pairs(n2), 210454)
+
+	def test_number_with_last_two_zero_digits(self):
+		n = 568900
+		self.assertEqual(reverse_digits_in_pairs(n), 659800)
+
+	def test_number_zero_digit_at_second_from_left(self):
+		n = 603211
+		self.assertEqual(reverse_digits_in_pairs(n), 62311)
 
 if __name__ == '__main__':
-	unittest.main()
+	unittest.main(verbosity=3)
