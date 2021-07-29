@@ -30,15 +30,23 @@ def dna_nt_counter(filename):
   # create a counter dictionary to 
   # keep count of each symbol
   counter = dict()
-  for symbol in sample:
-    # if this is the first time 
-    # seeing the current symbol
-    if counter.get(symbol, -1) == -1:  
-      counter[symbol] = 1 # record 1
-    else:
-      # otherwise increment symbol's count by 1
-      counter[symbol] += 1
-  print(f"{counter['A']} {counter['C']} {counter['G']} {counter['T']}")
+
+  # Open file to read content 
+  with open(filename, 'r') as f:
+    # Be careful about using read() 
+    # in case where file size is too big 
+    sample = f.read() 
+    # Iterate through sample string, one symbol at a time
+    for symbol in sample:
+      # if this is the first time 
+      # seeing the current symbol
+      if counter.get(symbol, -1) == -1:  
+        counter[symbol] = 1 # record 1
+      else:
+        # otherwise increment symbol's count by 1
+        counter[symbol] += 1
+
+  return f"{counter['A']} {counter['C']} {counter['G']} {counter['T']}"
 
 # Create main() function 
 def main():
