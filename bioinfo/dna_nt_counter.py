@@ -17,9 +17,11 @@ In comments and code, you may see two terms that are used
 interchangeably and they are symbol and nucleotide.
 
 Development Plan:
- - Create a function to count nucleotides in a sample DNA string
- - Display count results for each symbol in our function
  - Read files containing DNA strings on command line
+ - Create a function to accept a file and read the content
+ - Within the function, count nucleotides in a sample DNA string
+ - Return count results for each symbol in our function
+ - Print out result or write it to files
 """
 
 
