@@ -48,7 +48,7 @@ def main():
 
   # no args present
   if not args:
-    print('usage: [--summartfile] file [file ...]')
+    print('usage: [--summaryfile] file [file ...]')
     sys.exit(1)
 
   # Notice the summary flag and remove it
