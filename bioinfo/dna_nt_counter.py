@@ -42,8 +42,9 @@ def dna_nt_counter(sample):
 
 # Create main() function 
 def main():
-  pass  
-
+  # Make a list of command line arguments omitting
+  # the [0] element which is the script itself
+  args = sys.argv[1:]
 
 # Verify tests by running this file on terminal
 if __name__ == '__main__':
