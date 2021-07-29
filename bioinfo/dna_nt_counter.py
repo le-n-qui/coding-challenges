@@ -56,7 +56,21 @@ def main():
   summary = False
   if args[0] == '--summaryfile':
     summary = True
-    del args[0] 
+    del args[0]
+
+  # Process files in args list
+  # For each file, get a one-liner result
+  # either print the text
+  # or write it to a summary file
+  for file in args:
+    result = dna_nt_counter(file)
+    if summary == False:
+      print(result)
+    else:
+      summary_file = file + '_summary.txt'
+      with open(summary_file, 'w') as f:
+        f.write(result) 
+
 
 # Verify tests by running this file on terminal
 if __name__ == '__main__':
