@@ -26,7 +26,7 @@ Development Plan:
 
 # Define function to count
 # nucleotides in a DNA string
-def dna_nt_counter(sample):
+def dna_nt_counter(filename):
   # create a counter dictionary to 
   # keep count of each symbol
   counter = dict()
