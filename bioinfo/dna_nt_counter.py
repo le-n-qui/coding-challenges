@@ -38,10 +38,11 @@ def dna_nt_counter(sample):
 			counter[symbol] += 1
 	print(f"{counter['A']} {counter['C']} {counter['G']} {counter['T']}")
 
-# Make a Unit Test class
-class TestStringDNA(unittest.TestCase):
+# Create main() function 
+def main():
 	pass
+
 
 # Verify tests by running this file on terminal
 if __name__ == '__main__':
- 	unittest.main(verbosity=3) 
+ 	main()
