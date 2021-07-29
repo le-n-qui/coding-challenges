@@ -46,6 +46,11 @@ def main():
   # the [0] element which is the script itself
   args = sys.argv[1:]
 
+  # no args present
+  if not args:
+    print('usage: [--summartfile] file [file ...]')
+    sys.exit(1)  
+
 # Verify tests by running this file on terminal
 if __name__ == '__main__':
   main()
