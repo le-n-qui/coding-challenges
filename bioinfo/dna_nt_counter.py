@@ -4,8 +4,6 @@
 import sys
 
 """
-Rosalind: Problem 1
-
 DNA string is a string constructed from the alphabet {A, C, G, T}
 
 Given: A DNA string s of length at most 1000 nt (nucleotides).
@@ -77,7 +75,7 @@ def main():
     if summary == False:
       print(result)
     else:
-      summary_file = file + '_summary.txt'
+      summary_file = file + '.summary'
       with open(summary_file, 'w') as f:
         f.write(result) 
 
