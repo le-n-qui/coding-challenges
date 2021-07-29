@@ -25,24 +25,24 @@ Development Plan:
 # Define function to count
 # nucleotides in a DNA string
 def dna_nt_counter(sample):
-	# create a counter dictionary to 
-	# keep count of each symbol
-	counter = dict()
-	for symbol in sample:
-		# if this is the first time 
-		# seeing the current symbol
-		if counter.get(symbol, -1) == -1:  
-			counter[symbol] = 1 # record 1
-		else:
-			# otherwise increment symbol's count by 1
-			counter[symbol] += 1
-	print(f"{counter['A']} {counter['C']} {counter['G']} {counter['T']}")
+  # create a counter dictionary to 
+  # keep count of each symbol
+  counter = dict()
+  for symbol in sample:
+    # if this is the first time 
+    # seeing the current symbol
+    if counter.get(symbol, -1) == -1:  
+      counter[symbol] = 1 # record 1
+    else:
+      # otherwise increment symbol's count by 1
+      counter[symbol] += 1
+  print(f"{counter['A']} {counter['C']} {counter['G']} {counter['T']}")
 
 # Create main() function 
 def main():
-	pass
+  pass  
 
 
 # Verify tests by running this file on terminal
 if __name__ == '__main__':
- 	main()
+  main()
