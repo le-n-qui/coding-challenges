@@ -49,7 +49,14 @@ def main():
   # no args present
   if not args:
     print('usage: [--summartfile] file [file ...]')
-    sys.exit(1)  
+    sys.exit(1)
+
+  # Notice the summary flag and remove it
+  # from args if it is present
+  summary = False
+  if args[0] == '--summaryfile':
+    summary = True
+    del args[0] 
 
 # Verify tests by running this file on terminal
 if __name__ == '__main__':
