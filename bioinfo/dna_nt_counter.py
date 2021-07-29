@@ -1,6 +1,8 @@
 # Bioinformatics Challenge Question
 # Programmer: Andy Qui
 
+import sys
+
 """
 Rosalind: Problem 1
 
